@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Seeds</title>
+	
+</head>
+
+<body>
+<center>
+<div>
+<label>Wymiary okna:</label>
+<div>
+<label>Wysokość: </label>
+<input id = "height" value = "500"></input>
+</div>
+<div>
+<label>Szerokość: </label>
+<input id = "width" value = "500"></input>
+</div>
+<div/>
+<div>
+<label>Sąsiedztwo:</label>
+<select name="sasiedztwo" id="sasiedztwo">
+  <option value="Default">---</option>
+  <option value="VonNeuman">VonNeuman</option>
+  <option value="Moore">Moore</option>
+  <option value="PentagonalneP">Pentagonalne Prawe</option>
+  <option value="PentagonalneL">Pentagonalne Lewe</option>
+  <option value="PentagonalneG">Pentagonalne Górne</option>
+  <option value="PentagonalneD">Pentagonalne Dolne</option>
+  <option value="PentagonalneLSE">Pentagonalne Losowe</option>
+  <option value="HeksagonalneL">Heksagonalne Lewe</option>
+  <option value="HeksagonalneP">Heksagonalne Prawe</option>
+  <option value="HeksagonalneLSE">Heksagonalne Losowe</option>
+</select>
+<label>Warunek brzegowy:</label>
+<select name="brzeg" id="brzeg">
+  <option value="default">---</option>
+  <option value="absorb">Absorbujący</option>
+  <option value="period">Periodyczny</option>
+</select>
+<label>Zarodkowanie:</label>
+
+<select onchange="fillArray()" name="zarodkowanie" id="zarodkowanie">
+  <option value="default">---</option>
+  <option value="jednorodne">Jednorodne</option>
+  <option value="promien">Z promieniem</option>
+  <option value="losowe">Losowe</option>
+  <option value="wyklikanie">Wyklikanie</option>
+</select>
+</div>
+<div>
+<button onclick="Execute()">Start</button>
+<button id = "pause" onclick="togglePause()">Pause</button>
+<button onclick="Refresh()">Refresh</button>
+<button onclick="MonteCarlo()">Monte Carlo</button>
+</div>
+
+<div>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid"></canvas>
+<script type="text/javascript" src="Zarodki.js"></script>
+</div>
+</center>
+</body>
+</html>
